@@ -28,9 +28,9 @@ const router = createBrowserRouter ([
           element:<Coleges></Coleges>
         },
         {
-          path:'/know/:_id',
+          path:'/allcollege/:id',
           element: <Viewcollege></Viewcollege>,
-          loader: ({params}) => fetch (`http://localhost:5000/college/${params.id}`)
+          loader: ({params}) => fetch(`http://localhost:5000/allcollege/${params.id}`)
         }
       ]
     },
