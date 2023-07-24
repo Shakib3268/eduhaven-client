@@ -5,6 +5,7 @@ import Login from "../Shared/Login/Login";
 import Singup from "../Shared/signup/Singup";
 import Coleges from "../pages/college/Coleges";
 import Viewcollege from "../pages/college/Viewcollege";
+import Admission from "../pages/Admssion/Admission";
 
 const router = createBrowserRouter ([
     {
@@ -31,6 +32,10 @@ const router = createBrowserRouter ([
           path:'/allcollege/:id',
           element: <Viewcollege></Viewcollege>,
           loader: ({params}) => fetch(`http://localhost:5000/allcollege/${params.id}`)
+        },
+        {
+          path:'admission',
+          element:<Admission></Admission>
         }
       ]
     },

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const Viewcollege = () => {
     const single = useLoaderData();
@@ -36,7 +36,7 @@ const Viewcollege = () => {
       <p><span className='text-black font-bold'>Research History : </span>{research_history}</p>
       <p><span>Ratings : </span>3.5</p>
     <div className="card-actions justify-end">
-                
+    <Link to='admission' className="badge badge-outline">Admition</Link>
     </div>
   </div>
 </div>
