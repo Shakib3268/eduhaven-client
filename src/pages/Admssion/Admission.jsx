@@ -12,7 +12,7 @@ const Admission = () => {
         formState: { errors },
       } = useForm();
       const onSubmit = (data) => {
-        fetch("http://localhost:5000/addcollege",{
+        fetch("https://eduhaven-server.vercel.app/addcollege",{
           method: "POST",
           headers:{
             "Content-Type": "application/json"

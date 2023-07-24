@@ -8,7 +8,7 @@ const MyCollege = () => {
   const [colleges, setCollege] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/admitCollage?email=${user?.email}`)
+    fetch(`https://eduhaven-server.vercel.app/admitCollage?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setCollege(data);

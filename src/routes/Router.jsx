@@ -34,12 +34,12 @@ const router = createBrowserRouter ([
         {
           path:'/allcollege/:id',
           element: <Viewcollege></Viewcollege>,
-          loader: ({params}) => fetch(`http://localhost:5000/allcollege/${params.id}`)
+          loader: ({params}) => fetch(`https://eduhaven-server.vercel.app/allcollege/${params.id}`)
         },
         {
           path:'/admission/:id',
           element:<Admission></Admission>,
-          loader: ({params}) => fetch(`http://localhost:5000/admission/${params.id}`)
+          loader: ({params}) => fetch(`https://eduhaven-server.vercel.app/admission/${params.id}`)
         },
         {
           path:'mycollege',

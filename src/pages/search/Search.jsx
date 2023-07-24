@@ -6,7 +6,7 @@ const Search = () => {
     const [searchCollage, setSearchCollage] = useState([]);
     console.log(searchCollage);
     const handleSearch = () => {
-        fetch(`http://localhost:5000/searchcollage/${searchText}`)
+        fetch(`https://eduhaven-server.vercel.app/searchcollage/${searchText}`)
             .then(data => {
                 setSearchCollage(data?.data.slice(0, 1));
             })
