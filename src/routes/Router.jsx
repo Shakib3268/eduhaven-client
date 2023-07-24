@@ -6,6 +6,9 @@ import Singup from "../Shared/signup/Singup";
 import Coleges from "../pages/college/Coleges";
 import Viewcollege from "../pages/college/Viewcollege";
 import Admission from "../pages/Admssion/Admission";
+import MyCollege from "../pages/My-college/MyCollege";
+import PrivateRoutes from "./PrivateRoutes";
+import Error from "../pages/error/Error";
 
 const router = createBrowserRouter ([
     {
@@ -34,11 +37,20 @@ const router = createBrowserRouter ([
           loader: ({params}) => fetch(`http://localhost:5000/allcollege/${params.id}`)
         },
         {
-          path:'admission',
-          element:<Admission></Admission>
+          path:'/admission/:id',
+          element:<Admission></Admission>,
+          loader: ({params}) => fetch(`http://localhost:5000/admission/${params.id}`)
+        },
+        {
+          path:'mycollege',
+          element:<PrivateRoutes><MyCollege></MyCollege></PrivateRoutes>
         }
-      ]
+      ],
     },
+    {
+      path:'*',
+      element:<Error></Error>
+    }
   ]);
   
   export default router;
